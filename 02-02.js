@@ -1,0 +1,56 @@
+const fs = require("fs");
+
+let data = fs.readFileSync("02-01_input.txt", "utf8");
+let values = data.split("\n");
+
+let score = 0;
+
+for (let val of values) {
+    let moves = val.split(" ");
+    if (moves.length === 2) {
+
+        //Score for outcome
+        if (moves[1] === "Y") {
+            score += 3;
+            moves[1] = moves[0];
+        }
+        else if (moves[1] === "Z") {
+            score += 6;
+
+            if (moves[0] === "A") {
+                moves[1] = "B";
+            }
+            else if (moves[0] === "B") {
+                moves[1] = "C";
+            }
+            else {
+                moves[1] = "A";
+            }
+        }
+        else {
+
+            if (moves[0] === "A") {
+                moves[1] = "C";
+            }
+            else if (moves[0] === "B") {
+                moves[1] = "A";
+            }
+            else {
+                moves[1] = "B";
+            }
+        }
+
+        //Score for shape selected
+        if (moves[1] === "A") {
+            score += 1;
+        }
+        else if (moves[1] === "B") {
+            score += 2;
+        }
+        else {
+            score += 3;
+        }
+    }
+}
+
+console.log(score);
