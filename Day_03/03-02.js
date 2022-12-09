@@ -1,7 +1,7 @@
 const fs = require("fs");
 
-let data = fs.readFileSync("03-01_input.txt", "utf8");
-let values = data.split("\n");
+const data = fs.readFileSync("Day_03/03_input.txt", "utf8");
+const values = data.split("\n");
 
 const priority = "_abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 

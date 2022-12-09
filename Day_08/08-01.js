@@ -1,6 +1,6 @@
 const fs = require("fs");
 
-const data = fs.readFileSync("08-01_input.txt", "utf8");
+const data = fs.readFileSync("Day_08/08_input.txt", "utf8");
 const lines = data.split("\n");
 
 const grid = [];
@@ -8,6 +8,7 @@ const grid = [];
 for (let line of lines) {
 
     if (line) {
+
         grid.push(line.split(""));
     }
 }

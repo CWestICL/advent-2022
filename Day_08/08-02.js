@@ -1,6 +1,6 @@
 const fs = require("fs");
 
-const data = fs.readFileSync("08-01_input.txt", "utf8");
+const data = fs.readFileSync("Day_08/08_input.txt", "utf8");
 const lines = data.split("\n");
 
 const grid = [];
@@ -8,11 +8,12 @@ const grid = [];
 for (let line of lines) {
 
     if (line) {
+
         grid.push(line.split(""));
     }
 }
 
-let scores = [];
+const scores = [];
 
 for (let y = 0; y < grid.length; y++) {
 
@@ -30,6 +31,7 @@ for (let y = 0; y < grid.length; y++) {
                 yuTrees++;
             }
             else {
+
                 yuTrees++;
                 break;
             }
@@ -42,6 +44,7 @@ for (let y = 0; y < grid.length; y++) {
                 ydTrees++;
             }
             else {
+
                 ydTrees++;
                 break;
             }
@@ -54,6 +57,7 @@ for (let y = 0; y < grid.length; y++) {
                 xlTrees++;
             }
             else {
+
                 xlTrees++;
                 break;
             }
@@ -66,6 +70,7 @@ for (let y = 0; y < grid.length; y++) {
                 xrTrees++;
             }
             else {
+
                 xrTrees++;
                 break;
             }
